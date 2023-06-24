@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!------------------------------ Required Meta Tag ------------------------------>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!------------------------------ Bootstrap CDN ------------------------------>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!------------------------------ Bootstrap File ------------------------------>
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" />
+    <!------------------------------ Bootstrap Icon ------------------------------>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <!------------------------------ CSS File ------------------------------>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Portal Unimal Clone</title>
+  </head>
+
+  <body>
+    <!------------------------------ HEADER NAVBAR ------------------------------>
+    <header class="bg-success-subtle position-sticky navbar navbar-expand-md top-0 z-2">
+      <nav class="container-md py-3">
+        <h1 class="text-success-emphasis fs-6 mb-0">PORTAL AKADEMIK | UNIVERSITAS MALIKUSSALEH</h1>
+
+        <div class="navbar-nav">
+          <div class="nav-item dropdown">
+            <button class="btn nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i
+                class="bi bi-brightness-high-fill theme-icon-active"
+                data-theme-icon-active="bi-brightness-high-fill"
+              ></i>
+            </button>
+
+            <ul class="dropdown-menu">
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="light">
+                  <i class="bi bi-brightness-high-fill" data-theme-icon="bi-brightness-high-fill"></i> Light
+                </button>
+              </li>
+
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="dark">
+                  <i class="bi bi-moon-fill" data-theme-icon="bi-moon-fill"></i> Dark
+                </button>
+              </li>
+
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="auto">
+                  <i class="bi bi-circle-half" data-theme-icon="bi-circle-half"></i> Auto
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-item profile">
+            <div class="profile__image">
+              <img
+                src="/user.png"
+                alt="User Profile"
+                srcset="/user.png"
+                class="nav-link rounded-circle img-thumbnail"
+              />
+            </div>
+
+            <div class="profile__user">
+              <p class="fw-bold" style="font-size: calc(1rem - 2px)">MUHAMMAD ALANA FAUZAN</p>
+              <p style="font-size: calc(0.75rem + 2px)">190170179</p>
+              <p style="font-size: calc(0.75rem + 2px)">TEKNIK INFORMATIKA</p>
+              <hr class="my-2" />
+
+              <a href="#" class="p-1 text-decoration-none">Logout</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!------------------------------ MAIN CONTENT ------------------------------>
+    <main class="container-md">
+      <div class="row">
+        <div class="col-lg-9">
+          <h1>Informasi Matakuliah Ditawarkan</h1>
+
+          <p class="description">
+            <strong>Keterangan:</strong><br />
+            informasi Matakuliah Ditawarkan berisi seluruh matakuliah yang ditawarkan pada semester aktif. Dari seluruh
+            matakuliah yang terdapat pada daftar, setiap matakuliah mempunyai aturan tersendiri bergantung pada program
+            studi, kurikulum, dan aturan akademik lainnya. untuk lebih jelasnya, Anda dapat melihat detail kelas.
+          </p>
+
+          <h2>Semester Genap 2022/2023</h2>
+
+          <!------------------------------ JURUSAN ------------------------------>
+          <div class="bg-info-subtle d-flex align-items-center p-2">
+            <span class="fs-6 w-25">Program studi</span>
+            <select class="form-select form-select-sm w-75" aria-label="form-select-sm example">
+              <option value="1">Teknik Elektro</option>
+              <option value="2">Teknik Sipil</option>
+              <option value="3">Teknik Energi terbaharukan</option>
+              <option value="4">Teknik Mesin</option>
+              <option value="5" selected>Teknik Informatika</option>
+            </select>
+          </div>
+
+          <!------------------------------ TABS SEMESTER ------------------------------>
+          <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="sem2-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#semester2"
+                type="button"
+                role="tab"
+                aria-controls="semester-2"
+                aria-selected="true"
+              >
+                Semester 2
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="sem4-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#semester4"
+                type="button"
+                role="tab"
+                aria-controls="semester-4"
+                aria-selected="false"
+              >
+                Semester 4
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="sem5-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#semester5"
+                type="button"
+                role="tab"
+                aria-controls="semester-5"
+                aria-selected="false"
+              >
+                Semester 5
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="sem6-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#semester6"
+                type="button"
+                role="tab"
+                aria-controls="semester-6"
+                aria-selected="false"
+              >
+                Semester 6
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="sem7-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#semester7"
+                type="button"
+                role="tab"
+                aria-controls="semester-7"
+                aria-selected="false"
+              >
+                Semester 7
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="sem8-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#semester8"
+                type="button"
+                role="tab"
+                aria-controls="semester-8"
+                aria-selected="false"
+              >
+                Semester 8
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <!------------------------------ Semester 2 ------------------------------>
+            <div class="tab-pane active" id="semester2" role="tabpanel" aria-labelledby="sem2-tab" tabindex="0">
+              <!------------------------------ MATAKULIAH 1 ------------------------------>
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary mt-3">
+                  <p class="mb-0">ALGORITMA DAN PEMOGRAMAN II</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A5</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A6</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!------------------------------ MATAKULIAH 2 ------------------------------>
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary">
+                  <p class="mb-0">DASAR DIGITAL</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">EVA DARNILA, ST., M.</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">EVA DARNILA, ST., M.</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">TAUFIQ, S.T., M.T</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">TAUFIQ, S.T., M.T</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A5</a>
+                      <p class="mb-0">MUKHLIS ABD MUTHALIB, S.T., M.Eng., Ph.D</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A6</a>
+                      <p class="mb-0">MUKHLIS ABD MUTHALIB, S.T., M.Eng., Ph.D</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!------------------------------ MATAKULIAH 3 ------------------------------>
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary">
+                  <p class="mb-0">KEMALIKUSSALEHAN</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">Dr. KHALSIAH, S.Pd., M.Hum</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">Dr. KHALSIAH, S.Pd., M.Hum</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">Dr. KHALSIAH, S.Pd., M.Hum</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">Dr. KHALSIAH, S.Pd., M.Hum</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!------------------------------ MATAKULIAH 4 ------------------------------>
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary">
+                  <p class="mb-0">KEWARGANEGARAAN</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">TEUKU YUDI AFRIZAL, S.H., M.H</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">TEUKU YUDI AFRIZAL, S.H., M.H</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">FATAHILLAH, S.H., M.HUM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">FATAHILLAH, S.H., M.HUM</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!------------------------------ MATAKULIAH 5 ------------------------------>
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary">
+                  <p class="mb-0">LOGIKA INFORMATIKA</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">MARYANA, S.Si., M.Si</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">MARYANA, S.Si., M.Si</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">MARYANA, S.Si., M.Si</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">CUT AGUSNIAR, S.T., M.Cs</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A5</a>
+                      <p class="mb-0">CUT AGUSNIAR, S.T., M.Cs</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A6</a>
+                      <p class="mb-0">CUT AGUSNIAR, S.T., M.Cs</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!------------------------------ MATAKULIAH 6 ------------------------------>
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary">
+                  <p class="mb-0">ORGANISASI DAN ARSITEKTUR KOMPUTER</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">ROZZI KESUMA DINATA, S.T., M.Eng</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">ROZZI KESUMA DINATA, S.T., M.Eng</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">SAFWANDI, S.T., M.Kom</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">SAFWANDI, S.T., M.Kom</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A5</a>
+                      <p class="mb-0">EVA DARNILA, S.T., M.T</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A6</a>
+                      <p class="mb-0">EVA DARNILA, S.T., M.T</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!------------------------------ MATAKULIAH 7 ------------------------------>
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary">
+                  <p class="mb-0">SISTEM OPERASI</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">-</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">-</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">-</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">-</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A5</a>
+                      <p class="mb-0">-</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A6</a>
+                      <p class="mb-0">-</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!------------------------------ MATAKULIAH 8 ------------------------------>
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary">
+                  <p class="mb-0">STATISTIKA DAN PROBABILITAS</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">Dr. MUNIRUL ULA, S.T., M.Eng</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">Dr. MUNIRUL ULA, S.T., M.Eng</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">-</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">-</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A5</a>
+                      <p class="mb-0">-</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A6</a>
+                      <p class="mb-0">-</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!------------------------------ Semester 4 ------------------------------>
+            <div class="tab-pane" id="semester4" role="tabpanel" aria-labelledby="sem4-tab" tabindex="0">
+              <!------------------------------ MATAKULIAH 1 ------------------------------>
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary mt-3">
+                  <p class="mb-0">ALGORITMA DAN PEMOGRAMAN II</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A5</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A6</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!------------------------------ MATAKULIAH 2 ------------------------------>
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary">
+                  <p class="mb-0">ALGORITMA DAN PEMOGRAMAN II</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A5</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A6</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!------------------------------ MATAKULIAH 3 ------------------------------>
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary">
+                  <p class="mb-0">ALGORITMA DAN PEMOGRAMAN II</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A5</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A6</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!------------------------------ MATAKULIAH 4 ------------------------------>
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary">
+                  <p class="mb-0">ALGORITMA DAN PEMOGRAMAN II</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A5</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A6</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!------------------------------ MATAKULIAH 5 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 6 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 7 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 8 ------------------------------>
+            </div>
+
+            <!------------------------------ Semester 5 ------------------------------>
+            <div class="tab-pane" id="semester5" role="tabpanel" aria-labelledby="sem5-tab" tabindex="0">
+              <!------------------------------ MATAKULIAH 1 ------------------------------>
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary mt-3">
+                  <p class="mb-0">ALGORITMA DAN PEMOGRAMAN II</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A5</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A6</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!------------------------------ MATAKULIAH 2 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 3 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 4 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 5 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 6 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 7 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 8 ------------------------------>
+            </div>
+
+            <!------------------------------ Semester 6 ------------------------------>
+            <div class="tab-pane" id="semester6" role="tabpanel" aria-labelledby="sem6-tab" tabindex="0">
+              <!------------------------------ MATAKULIAH 1 ------------------------------>
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary mt-3">
+                  <p class="mb-0">ALGORITMA DAN PEMOGRAMAN II</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A5</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A6</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!------------------------------ MATAKULIAH 2 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 3 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 4 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 5 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 6 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 7 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 8 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 9 ------------------------------>
+            </div>
+
+            <!------------------------------ Semester 7 ------------------------------>
+            <div class="tab-pane" id="semester7" role="tabpanel" aria-labelledby="sem7-tab" tabindex="0">
+              <!------------------------------ MATAKULIAH 1 ------------------------------>
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary mt-3">
+                  <p class="mb-0">ALGORITMA DAN PEMOGRAMAN II</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A5</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A6</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!------------------------------ MATAKULIAH 2 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 3 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 4 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 5 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 6 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 7 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 8 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 9 ------------------------------>
+
+              <!------------------------------ MATAKULIAH 10 ------------------------------>
+            </div>
+
+            <!------------------------------ Semester 8 ------------------------------>
+            <div class="tab-pane" id="semester8" role="tabpanel" aria-labelledby="sem8-tab" tabindex="0">
+              <!------------------------------ MATAKULIAH 1 ------------------------------->
+              <div class="dropdown__matkul">
+                <div class="dropdown__matkul-header bg-primary-subtle text-primary mt-3">
+                  <p class="mb-0">ALGORITMA DAN PEMOGRAMAN II</p>
+                  <i class="bi bi-arrow-down-circle ms-auto fs-4"></i>
+                </div>
+
+                <div class="dropdown__matkul-body m-2">
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A1</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A2</a>
+                      <p class="mb-0">ASRIANDA, S.KOM,. M.KOM</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A3</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A4</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A5</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+
+                    <li class="d-flex justify-content-between ms-3">
+                      <a href="#" class="text-decoration-none text-info">A6</a>
+                      <p class="mb-0">WAHYU FUADI, ST., M.IT</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!------------------------------ MATAKULIAH 2 ------------------------------->
+
+              <!------------------------------ MATAKULIAH 3 ------------------------------->
+
+              <!------------------------------ MATAKULIAH 4 ------------------------------->
+
+              <!------------------------------ MATAKULIAH 5 ------------------------------->
+
+              <!------------------------------ MATAKULIAH 6 ------------------------------->
+
+              <!------------------------------ MATAKULIAH 7 ------------------------------->
+
+              <!------------------------------ MATAKULIAH 8 ------------------------------->
+
+              <!------------------------------ MATAKULIAH 9 ------------------------------->
+            </div>
+          </div>
+        </div>
+
+        <aside class="col-lg-3 my-2">
+          <!-- <div class="card mb-2">
+            <div class="card-body">
+              <h3 class="card-title text-primary-emphasis fs-4">Informasi Pengguna</h3>
+              <hr />
+
+              <p class="card-text mb-0 fw-bold" style="font-size: calc(1rem - 2px)">MUHAMMAD ALANA FAUZAN</p>
+              <p class="card-text mb-0" style="font-size: calc(0.75rem + 2px)">190170179</p>
+              <p class="card-text mb-0" style="font-size: calc(0.75rem + 2px)">TEKNIK INFORMATIKA</p>
+            </div>
+          </div> -->
+
+          <div class="card mb-2">
+            <div class="card-body">
+              <h3 class="card-title text-primary-emphasis fs-4">Akademik</h3>
+              <hr />
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Halaman Depan</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Panduan</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Biodata</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Tagihan Piutang</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Informasi Matakuliah Ditawarkan</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Kartu Rencana Studi</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Pengambilan Matakuliah</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Kartu Hasil Studi</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Transkrip Nilai</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Laporan Aktivitas Mahasiswa</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Informasi Akademik</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Pengajuan</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Pengajuan Cuti</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Pengajuan Aktif Kuliah</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Workshop</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Ubah Password</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Beasiswa</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title text-primary-emphasis fs-4">Virtual Class</h3>
+              <hr />
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Materi Kuliah</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Pengumuman</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Tugas Kuliah</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Diskusi Online</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Agenda Kelas</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Agenda Pribadi</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">File Sharing</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Referensi</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none text-info link-page">Panduan</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!------------------------------ Footer ------------------------------>
+    <footer class="bg-dark p-1">
+      <p class="text-light text-center fs-6 mb-0">Portal Akademik UNIVERSITAS MALIKUSSALEH</p>
+      <p class="text-light text-center mb-0">&copy 2023, All Right Reserved</p>
+    </footer>
+
+    <!------------------------------ Javascript ------------------------------>
+    <!-- <script src="/vendor/bootstrap/bootstrap.bundle.min.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
